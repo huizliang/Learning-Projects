@@ -10,10 +10,11 @@ INSERT layoffs_raw
 SELECT*
 FROM layoffs;
 
--- CHECK FOR DUPLICATES
+-- CHECK FOR DUPLICATES BY ASSIGNING ROW_NUM FOR EACH RECORD
 SELECT *, ROW_NUMBER() OVER(PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, 'date', stage, country, funds_raised_millions) AS row_num
 FROM layoffs;
 
+-- CHECK FOR DUPLICATES (ROW_NUM>1)
 WITH checkduplicate_cte AS 
 (SELECT *, ROW_NUMBER() OVER(PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, 'date', stage, country, funds_raised_millions) AS row_num
 FROM layoffs
@@ -26,9 +27,11 @@ WHERE row_num >1;
 CREATE TABLE layoffs_distinct
 LIKE layoffs;
 
+-- ADD NEW COLUMN FOR ROW_NUM
 ALTER TABLE layoffs_distinct
 ADD row_num INT NOT NULL;
 
+-- INSERT DISTINCT RECORDS (INDICATED BY 1 AS THEIR ROW_NUM)
 INSERT layoffs_distinct
 WITH checkduplicate_cte AS 
 (SELECT *, ROW_NUMBER() OVER(PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, 'date', stage, country, funds_raised_millions) AS row_num
