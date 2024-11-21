@@ -7,12 +7,12 @@ FROM
 (SELECT name, region_id, sum(total_amt_usd) as total_rep_sale
 FROM (
 SELECT s.id as sales_rep_idd, s.name, r.id as region_id, a.id as accounts_id1, o.total_amt_usd
-from region r
-inner join sales_reps s
+FROM region r
+JOIN sales_reps s
 ON r.id = s.region_id
-inner join accounts a
+JOIN accounts a
 ON a.sales_rep_id = s.id
-inner join orders o
+JOIN orders o
 ON o.account_id = a.id) sub
 GROUP BY name, region_id) sub2) sub3
 WHERE top_rep_sale =1
@@ -25,11 +25,11 @@ SELECT sum(total_amt_usd) as total_sale, region_name, count(total) as total_sale
 FROM
 (SELECT o.total_amt_usd, r.name as region_name, o.total
 from region r
-inner join sales_reps s
+JOIN sales_reps s
 ON r.id = s.region_id
-inner join accounts a
+JOIN accounts a
 ON a.sales_rep_id = s.id
-inner join orders o
+JOIN orders o
 ON o.account_id = a.id) sub
 GROUP BY region_name
 ORDER BY sum(total_amt_usd) DESC;
