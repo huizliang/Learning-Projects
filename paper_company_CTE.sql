@@ -1,5 +1,6 @@
 --1.Provide the name of the sales_rep in each region with the largest amount of total_amt_usd sales
 
+--first CTE to sum total_amt_usd for each sales rep
 WITH t1 AS (
 SELECT s.name as srep_name, r.id as region_id, sum(o.total_amt_usd) as total_rep_sales
 from region r
@@ -11,10 +12,12 @@ join orders o
 ON o.account_id = a.id
 GROUP BY s.name, r.id),
 
+--2nd CTE to rank sales reps by their total_sales_amt
 t2 AS(
 SELECT srep_name, region_id, total_rep_sales, ROW_NUMBER()OVER(PARTITION BY region_id ORDER BY total_rep_sales DESC) AS sales_rank
 FROM t1)
 
+--JOIN both CTEs to filter the sales rep that is ranked 1st in total sales amt in each region
 SELECT t2.srep_name, t2.region_id, t2.total_rep_sales, sales_rank
 FROM t1
 JOIN t2
