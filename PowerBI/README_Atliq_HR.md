@@ -15,7 +15,7 @@ Pinali M., an HR representative of AtliQ has reached out to the data analytics t
 
 The company has provided 3 months of attendance data. The dataset is stored in one Excel worksheet consisting of four tables: Apr 2022, May 2022, June 2022, Attendance Code. An entity relationship diagram of the tables is as follows:
 
-![ERD_snapo](https://github.com/huizliang/PowerBI/blob/main/AtliQ_HR_ERD.png)
+![ERD_snapo](https://github.com/huizliang/Learning-Projects/blob/main/PowerBI/AtliQ_HR_ERD.png)
 
 While exploring the data, it was observed that the days in each of the months served as the headers in each table. This was problematic because it meant that the tables could not be easily appended with future attendance information. Below are the steps followed to transform the data.
 
@@ -38,7 +38,7 @@ While exploring the data, it was observed that the days in each of the months se
 
  ## Snapshot of Mobile View Dashboard (Power BI DESKTOP)
 
-![dashboard_snapo](https://github.com/huizliang/PowerBI/blob/main/AtliQ_HR_Dashboard.png)
+![dashboard_snapo](https://github.com/huizliang/Learning-Projects/blob/main/PowerBI/AtliQ_HR_Dashboard.png)
 
 
 ### Main Insights
