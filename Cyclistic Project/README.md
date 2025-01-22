@@ -20,7 +20,7 @@ The data used for this project is made available through Motivate International 
 
 Overview of column names and data types:
 
-![Cyclistic_headers](https://github.com/user-attachments/assets/3f8009c1-82ef-4aed-b1e5-19e794ff411d)
+![Cyclistic_headers](https://github.com/huizliang/Learning-Projects/blob/main/Cyclistic%20Project/Cyclistic_headers.png)
 
 
 Due to the large volume of the dataset, Python was the most efficient tool to use to gain familiarization with the data and to check the quality of the data. To view the codes used to clean and analyze the dataset in Python, click [here](https://github.com/huizliang/Cyclistic/blob/main/Cyclistic_tripdata2.ipynb).
@@ -36,8 +36,8 @@ After reviewing the dataset, several key differences between how members and non
 
 Below is a visualization of the key findings:
 
-![Cyclistic Dashboard 1](https://github.com/user-attachments/assets/3182ba88-424e-454d-b50e-bc68933a5b67)
-![Cyclistic Dashboard 2](https://github.com/user-attachments/assets/7ec7fd6c-3b23-416b-a964-e0a937bd935e)
+![Cyclistic Dashboard 1](https://github.com/huizliang/Learning-Projects/blob/main/Cyclistic%20Project/Cyclistic%20Dashboard%201.png)
+![Cyclistic Dashboard 2](https://github.com/huizliang/Learning-Projects/blob/main/Cyclistic%20Project/Cyclistic%20Dashboard%202.png)
 
 
 To view the visualizations in Tableau, click [here](https://public.tableau.com/app/profile/hui.liang/vizzes).
