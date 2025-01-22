@@ -19,7 +19,7 @@ Prior to the project, the data analytics team met with Bahvin to discuss the dim
 
 The companies main database structure as seen below consists of five tables: sales products, sales transactions, sales date, sales customers, and sales markets with more than 150,000 records. An entity relationship diagram of the tables is as follows:
 
-![ERD_snapo](https://github.com/huizliang/PowerBI/blob/main/Atliq_sales_ERD.png)
+![ERD_snapo](https://github.com/huizliang/Learning-Projects/blob/main/PowerBI/Atliq_sales_ERD.png)
 
 ### Steps Followed
 
@@ -43,11 +43,11 @@ The companies main database structure as seen below consists of five tables: sal
 
 ## Snapshot of Dashboard (Power BI Desktop)
 
-![dashboard_snapo](https://github.com/huizliang/PowerBI/blob/main/Atliq_Sales_Dashboard.png)
+![dashboard_snapo](https://github.com/huizliang/Learning-Projects/blob/main/PowerBI/Atliq_Sales_Dashboard.png)
  
  ## Snapshot Mobile View Dashboard (Power BI DESKTOP)
  
-![Dashboard_upload](https://github.com/huizliang/PowerBI/blob/main/Atliq_Sales_mobile_view.png)
+![Dashboard_upload](https://github.com/huizliang/Learning-Projects/blob/main/PowerBI/Atliq_Sales_mobile_view.png)
 
 
 
